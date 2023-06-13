@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  background: #252525;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 4vmin;
+}
+
+.wrap button {
+  width: 20vmin;
+  padding: 2vmin 4vmin;
+  border: 2px solid #fff;
+  background: none;
+  color: #fff;
+  font-size: 3vmin;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.wrap .buttons {
+  display: flex;
+  gap: 2vmin;
+  position: fixed;
+  top: 5vmin;
+}
+
+.box {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #fff;
+  width: 50vmin;
+  height: 30vmin;
+  font-size: 4vmin;
+  border-radius: 3vmin;
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  box-shadow: 1px 10px 10px -4px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  width: 20vmin;
+  height: 20vmin;
+  font-size: 3vmin;
+  color: #252525;
+  border-radius: 50%;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.switch {
+  transition: all ease 0.5s;
+  width: 70px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  align-items: center;
+}
+
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+  background-color: #7b2ff7;
+  border: 1px solid #fff;
+}
+
+.handle {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 40px;
 }
